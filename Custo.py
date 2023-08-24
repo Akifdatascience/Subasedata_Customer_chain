@@ -4,7 +4,7 @@
 # In[5]:
 
 
-get_ipython().system('pip install joblib')
+!pip install joblib
 import streamlit as st
 import pandas as pd
 import joblib
