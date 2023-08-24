@@ -13,13 +13,7 @@ import streamlit as st
 import pandas as pd
 model=tf.keras.models.load_model('my_model.hdfs')
 
-"""
-filename = "churn_model.pkl"
 
-# Load the model from the pickle file
-with open(filename, 'rb') as file:
-    loaded_model = pickle.load(file)
-"""
 # Create a function to predict churn
 def predict_churn(age, gender, location, subscription_length, monthly_bill, total_usage):
     # Convert gender to numerical value (0 for Female, 1 for Male)
