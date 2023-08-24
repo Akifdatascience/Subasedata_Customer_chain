@@ -1,5 +1,8 @@
 # requirement.txt
 
+# Upgrade pip to the latest version
+--upgrade pip
+
 # Install compatible versions of packages
 matplotlib==3.4.3
 pandas==1.3.3
@@ -8,11 +11,7 @@ scipy==1.7.3
 seaborn==0.11.2
 streamlit==1.4.0
 tensorflow==2.5.0
-keras==2.5.0
+keras==2.4.3  # Latest version compatible with the given environment
 six==1.15.0
-
-# Install compatible versions of additional packages
-altair==4.2.2  # This version is compatible with Streamlit 1.4.0
-protobuf==3.20.3  # A compatible version for TensorFlow 2.5.0
 
 # Allow pip to handle other dependency resolutions
