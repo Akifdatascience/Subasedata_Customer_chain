@@ -4,7 +4,6 @@
 # In[5]:
 
 
-pip install joblib
 import streamlit as st
 import pandas as pd
 import joblib
