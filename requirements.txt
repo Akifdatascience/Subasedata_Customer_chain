@@ -1,0 +1,12 @@
+GitPython==3.1.31
+joblib==1.2.0
+jsonschema==4.17.3
+matplotlib==3.7.1
+numpy==1.25.0
+pandas==2.0.2
+scikit-learn==1.0.2
+scipy==1.11.0
+seaborn==0.12.2
+streamlit==1.24.0
+tensorflow==2.6.0
+keras==2.6.0
