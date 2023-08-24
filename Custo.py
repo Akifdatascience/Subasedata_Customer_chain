@@ -3,7 +3,6 @@
 
 # In[5]:
 
-
 import tensorflow as tf
 import streamlit as st
 import numpy as np
@@ -36,28 +35,23 @@ def predict_churn(age, gender, location, subscription_length, monthly_bill, tota
 # Streamlit UI
 st.title('Customer Churn Prediction')
 
-st.sidebar.header('User Input')
+st.write("Adjust the input fields below and click the 'Predict Churn' button to see the prediction.")
 
 # Collect user input
-age = st.sidebar.number_input('Age', min_value=18, max_value=100, value=30)
-gender = st.sidebar.selectbox('Gender', ['Female', 'Male'])
-location = st.sidebar.selectbox('Location', ['Los Angeles', 'New York', 'Miami', 'Chicago', 'Houston'])
-subscription_length = st.sidebar.number_input('Subscription Length (months)', min_value=1, max_value=24, value=12)
-monthly_bill = st.sidebar.number_input('Monthly Bill', min_value=0.0, step=1.0, value=50.0)
-total_usage = st.sidebar.number_input('Total Usage (GB)', min_value=0.0, step=1.0, value=10.0)
+age = st.number_input('Age', min_value=18, max_value=100, value=30)
+gender = st.selectbox('Gender', ['Female', 'Male'])
+location = st.selectbox('Location', ['Los Angeles', 'New York', 'Miami', 'Chicago', 'Houston'])
+subscription_length = st.number_input('Subscription Length (months)', min_value=1, max_value=24, value=12)
+monthly_bill = st.number_input('Monthly Bill', min_value=0.0, step=1.0, value=50.0)
+total_usage = st.number_input('Total Usage (GB)', min_value=0.0, step=1.0, value=10.0)
 
 # Predict churn
-if st.sidebar.button('Predict Churn'):
+if st.button('Predict Churn'):
     prediction = predict_churn(age, gender, location, subscription_length, monthly_bill, total_usage)
     
     if prediction is not None:
         churn_status = 'Churn' if prediction > 0.5 else 'No Churn'
         st.write(f'Based on the input, the predicted churn status is: {churn_status}')
-
-# Information and tips
-st.info("This is a simple Customer Churn Prediction app. Adjust the input fields on the left sidebar and click the 'Predict Churn' button to see the prediction.")
-
-
 
 # In[ ]:
 
