@@ -7,7 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/17v-b1KpqzcN8yhe8T-X2DZjgHikJyfLM
 """
 
-
+import tensorflow as tf
+from tensorflow import keras
 import streamlit as st
 import pandas as pd
 import pickle
