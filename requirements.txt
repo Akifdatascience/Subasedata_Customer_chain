@@ -8,6 +8,7 @@ scipy==1.7.3
 seaborn==0.11.2
 streamlit==1.4.0
 tensorflow==2.5.0
+keras==2.5.0
 
 # Allow pip to handle numpy version resolution
 numpy
