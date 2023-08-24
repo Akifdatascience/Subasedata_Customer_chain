@@ -1,6 +1,5 @@
 click==8.0.0
 protobuf==3.20.3
-numpy==1.25.2
 altair==4.2.2
 pytz==2023.3
 tzdata==2023.3
