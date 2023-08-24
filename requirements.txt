@@ -1,4 +1,5 @@
-numpy
+six~=1.15.0
+numpy~=1.19.2
 python-dateutil==2.8.2
 pandas==2.0.3
 toolz==0.12.0
