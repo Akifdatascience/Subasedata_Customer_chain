@@ -1,6 +1,4 @@
 six
-numpy
-python-dateutil
 pandas
 toolz
 streamlit
