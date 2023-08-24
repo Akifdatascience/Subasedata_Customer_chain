@@ -39,12 +39,12 @@ st.title('Customer Churn Prediction')
 st.sidebar.header('User Input')
 
 # Collect user input
-age = st.sidebar.slider('Age', 18, 100, 30)
-gender = st.sidebar.radio('Gender', ['Female', 'Male'])
+age = st.sidebar.number_input('Age', min_value=18, max_value=100, value=30)
+gender = st.sidebar.selectbox('Gender', ['Female', 'Male'])
 location = st.sidebar.selectbox('Location', ['Los Angeles', 'New York', 'Miami', 'Chicago', 'Houston'])
-subscription_length = st.sidebar.slider('Subscription Length (months)', 1, 24, 12)
-monthly_bill = st.sidebar.number_input('Monthly Bill', min_value=0.0, step=1.0)
-total_usage = st.sidebar.number_input('Total Usage (GB)', min_value=0.0, step=1.0)
+subscription_length = st.sidebar.number_input('Subscription Length (months)', min_value=1, max_value=24, value=12)
+monthly_bill = st.sidebar.number_input('Monthly Bill', min_value=0.0, step=1.0, value=50.0)
+total_usage = st.sidebar.number_input('Total Usage (GB)', min_value=0.0, step=1.0, value=10.0)
 
 # Predict churn
 if st.sidebar.button('Predict Churn'):
@@ -55,7 +55,8 @@ if st.sidebar.button('Predict Churn'):
         st.write(f'Based on the input, the predicted churn status is: {churn_status}')
 
 # Information and tips
-st.info("This is a simple Customer Churn Prediction app. Adjust the sliders and input fields on the left sidebar and click the 'Predict Churn' button to see the prediction.")
+st.info("This is a simple Customer Churn Prediction app. Adjust the input fields on the left sidebar and click the 'Predict Churn' button to see the prediction.")
+
 
 
 # In[ ]:
